@@ -4,16 +4,16 @@ const calories = buffer.toString();
 
 let sumCal = 0;
 let mostCal = 0;
-let elf1 = 0;
-let elf2 = 0;
-let elf3 = 0; 
+let top3 = 0
+let array_calories = [];
 
 function mostCalories(){
 
     const elf = calories.split("\n")
 
-    for (let i = 0; i < elf.length; i++) {
-        if(elf[i] === ""){
+    for (let i = 0; i < elf.length; i++) { 
+        if(elf[i] === ""){ //|| i === (elf.length -1)
+            array_calories.push(sumCal);
             if(sumCal > mostCal){
                 mostCal = sumCal;
             }
@@ -21,12 +21,13 @@ function mostCalories(){
         }else{
             sumCal += parseInt(elf[i]); 
         }
-
-        
-
-
       }
-      console.log(mostCal)
+
+      array_calories.sort(function(a, b){return b - a});
+      top3 = array_calories[0] + array_calories[1] + array_calories[2];
+      console.log("The elf carrying the most calories: " + mostCal)
+
+      console.log("The total calories of the top 3 elves: " +  top3)
 }
 
 mostCalories();
