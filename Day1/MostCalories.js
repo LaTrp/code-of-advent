@@ -4,16 +4,16 @@ const calories = buffer.toString();
 
 let sumCal = 0;
 let mostCal = 0;
+let elf1 = 0;
+let elf2 = 0;
+let elf3 = 0; 
 
 function mostCalories(){
 
     const elf = calories.split("\n")
-    let sums = elf[5];
-
-    console.log(sums)
 
     for (let i = 0; i < elf.length; i++) {
-        if(elf[i] === "" || i === (elf.length -1)){
+        if(elf[i] === ""){
             if(sumCal > mostCal){
                 mostCal = sumCal;
             }
@@ -21,6 +21,10 @@ function mostCalories(){
         }else{
             sumCal += parseInt(elf[i]); 
         }
+
+        
+
+
       }
       console.log(mostCal)
 }
