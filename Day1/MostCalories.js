@@ -20,12 +20,10 @@ function mostCalories(){
         }
       }
 
-    
       array_calories.sort(function(a, b){return b - a});
       mostCal = array_calories[0]
       top3 = array_calories[0] + array_calories[1] + array_calories[2];
       console.log("The elf carrying the most calories: " + mostCal)
-
       console.log("The total calories of the top 3 elves: " +  top3)
 }
 
