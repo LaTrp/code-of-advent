@@ -1,7 +1,7 @@
 const fs = require("fs");
 const buffer = fs.readFileSync("Day1/Calories.txt");
 const calories = buffer.toString();
-
+console.log(calories)
 let sumCal = 0;
 let mostCal = 0;
 let top3 = 0
@@ -9,7 +9,7 @@ let array_calories = [];
 
 function mostCalories(){
 
-    const elf = calories.split("\n")
+    const elf = calories.split("\r\n")
 
     for (let i = 0; i < elf.length; i++) { 
         if(elf[i] === ""){ //|| i === (elf.length -1)
