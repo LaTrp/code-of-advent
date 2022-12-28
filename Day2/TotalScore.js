@@ -1,12 +1,12 @@
 const fs = require("fs");
-const buffer = fs.readFileSync("Day2/Input.txt");
-const score = buffer.toString();
+const input = fs.readFileSync("Day2/Input.txt").toString();
+
 
 let opponentInput;
 let myInput;
 let totalScore = 0; 
 
-const elf = score.split("\n")
+const elf = input.split("\n")
 
 console.log(elf[elf.length -1].charAt(0));
 console.log(elf[elf.length -1].charAt(2));
